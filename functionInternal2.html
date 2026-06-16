@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Internal 2</title>
+    <script>
+        function X1(){
+            //var name = "John";
+            this.name="John"; //When we use this keyword, it refers to the current instance of the function. So, when we create an instance of the function using the new keyword, it assigns the value "John" to the name property of that instance.
+            var age=" 25";    //became private variable.
+            var job="Developer"; //became private variable.
+         //  return 500;
+        }
+        let inst1= new X1(); //When we create an instance of a function using the new keyword, it creates an object and assigns it to the variable inst1. The properties of the object are defined by the function X1. However, since there is no return statement in the function, the value of inst1 will be undefined.
+        console.log(typeof inst1);  //undefined as output because there is no return statement in the function. If we add return statement then it will return the value and type of that value will be number.
+        
+        console.log(inst1.name);
+        console.log(inst1.age);
+        console.log(inst1.job);    
+    </script>
+<body>
+</body>
+</meta name="viewport">
+</head>
+</html>
