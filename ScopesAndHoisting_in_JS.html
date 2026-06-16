@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Page</title>
+    <script>
+        /*var y="200";
+            if (true) {         // non-lexical scope
+                var y="200";    //Hoisted.        *hoisting -antipattern     (Variable hosting)
+            }
+            console.log(y);      //200
+        */
+
+
+
+       /*     function test() {        //lexical scope
+            var Location= "india";
+            }
+            test();
+
+        console.log(Location);      // india is 'undefined' because of lexical scope.
+                                    //so error on console will be "Location is not defined" because it is not accessible outside the function.
+        */
+
+
+
+        /*
+        function a() {
+            console.log("function executed");
+        }
+        a();
+
+        x = function() {
+            console.log("x executed");
+        }
+        x();
+        
+        /*also if order of execution is changed*/
+        /*
+        x = function() {
+            console.log("x executed");
+        }
+        x();
+
+        function a() {
+            console.log("function executed");      //(functional hosting)so function a() is hoisted and can be called before its definition
+        }
+        a();
+        */
+
+
+        x();
+        x = function() {
+            console.log("x executed");         //shows Error because x is not hoisted. So it cannot be called before its definition.
+        }
+        
+
+        
+    </script>
+</head>
+<body>
+    Hoisting:<p>Hoisting is JavaScript's default behavior of moving declarations to the top.
+            Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+            </p>
+</body>
+</head>
+

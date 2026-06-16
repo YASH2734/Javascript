@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        /*
+        // var color = "blue";
+
+        function changeColor() {
+            var color = "Yellow";
+            if (color === "blue") {
+                color = "red";       //scope chain--[changeColor(),window]  //lexical scope
+            } else {
+                color = "blue";      //scope chain--[changeColor(),window]  //lexical scope
+            }
+
+            console.log("Value of Color is " + color);
+        }
+
+        changeColor(); // Function call
+*/
+
+    /*     function changeColor() {
+            var anotherColor = "red";
+
+            function swapColors() {
+                console.log(x);
+                var tempColor = anotherColor;     //scope chain--[swapColors(),changeColor1(),window]  //lexical scope
+                anotherColor = color;          //scope chain--[swapColors(),changeColor1
+                color = tempColor;                 //scope chain--[swapColors(),changeColor1(),window]  //lexical scope
+            }
+            swapColor(); // Function call
+        }
+        changeColor();
+
+        console.log("Value of Color is " + color);
+        console.log(x);
+        */
+        if(true){
+            var x = 10;
+            let job=" Developer ";
+        }
+        console.log(x);
+        console.log(job);  //Reference_Error: job is not defined
+    </script>
+</head>
+<body>
+</body>
+</html>
