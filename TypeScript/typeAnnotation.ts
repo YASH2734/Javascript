@@ -24,6 +24,7 @@ sayHello = function(){
 sayHello('hello');
 */
 
+
 /*
 //object type annotation.
 let person: { name: string; height in cm: number; isActive: boolean } = {
@@ -33,16 +34,85 @@ let person: { name: string; height in cm: number; isActive: boolean } = {
 };
 */
 
+
 /*
 let x:boolean | string;        // can add these instead of string '|"hello"| "hi";' 
     x= true;                  // This is valid because x can be a boolean.
     x= "Hello";               // This is also valid because x can be a string.
 */
-const Poet ={
+
+
+/*
+const Poet ={                          //makes type shape
     name : "William Wordsworth",
     born : 1770,
 };
-const PoetLater: typeof Poet = {
-    name : "David Wordsworth",
+const PoetLater: typeof Poet = {        // typeof Poet is used to create a new type based on the structure of the Poet object.                                   
+    name : "David Wordsworth",          // This means that PoetLater must have the same properties and types as Poet.
     born : 1780,
 };
+*/
+
+/*
+//Type Aliases  --  custom type.
+
+type Poet = {      //Poet-->Custom type.
+    name : string;
+    born : number;
+};
+const PoetLater: Poet = {
+    name : "David Wordsworth",
+    born : 1980,
+};  
+const AnotherPoetLater: Poet = {
+    name : "William Swordsman",
+    born : 1770,
+};  
+
+*/ 
+
+
+/*
+//Interface --  custom type.
+
+interface Poet{               //No need to use '=' sign while declaring interface.but same application as type alias.
+    name: string;
+    born: number;
+}
+const PoetLater: Poet = {
+    name : "David Wordsworth",
+    born : 1980,
+};  
+const AnotherPoetLater: Poet = {
+    name : "William Swordsman",
+    born : 1770,
+
+};
+*/
+
+/*
+interface Poet{               //No need to use '=' sign while declaring interface.but same application as type alias.
+    name: string;
+    born: number;
+};
+interface Poet{               //No need to use '=' sign while declaring interface.but same application as type alias.
+    salary: number;
+    job: string;
+};
+const PoetLater: Poet = {
+    name : "ThorFell Swordsman",
+    born : 1980,
+    salary : 10000,
+    job : "Developer",
+};  
+*/
+
+//type alias can utilize 'primitive types' & 'union types'.
+type x= string | number
+
+let firstName : x;
+firstName = "Henry";
+firstName = 200;
+firstNmae = true;     //error 
+
+
